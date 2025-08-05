@@ -17,5 +17,5 @@ if st.button("Prediksi"):
     features = np.array([[price, total_sales]])
     features_scaled = scaler.transform(features)  
     prediction = float(model.predict(features_scaled)[0])
-st.success(f"Prediksi Rating: {prediction:.2f}")
+    st.success(f"Prediksi Rating: {prediction:.2f}")
 
