@@ -16,5 +16,6 @@ total_sales = st.number_input("Total Penjualan", value=0)
 if st.button("Prediksi"):
     features = np.array([[price, total_sales]])
     features_scaled = scaler.transform(features)  
-    prediction = model.predict(features_scaled)[0]
-    st.success(f"Prediksi Rating: {prediction:.2f}")
+    prediction = float(model.predict(features_scaled)[0])
+st.success(f"Prediksi Rating: {prediction:.2f}")
+
